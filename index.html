@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CarzzyApps Portal</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">CARZZYAPPS</p>
+          <h1>CARZZYAPPS</h1>
+          <p class="tagline">Play · Compete · Conquer</p>
+        </div>
+        <div class="hero-illustration" aria-hidden="true">
+          <!-- TODO: Replace this placeholder illustration with your official logo or image asset. -->
+          <svg viewBox="0 0 240 240" role="img" aria-label="Carzzy Apps illustration">
+            <rect x="24" y="24" width="192" height="192" rx="36" fill="url(#grad)" />
+            <path d="M74 154c0-31 25-56 56-56s56 25 56 56" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round" />
+            <circle cx="96" cy="106" r="12" fill="#fff" />
+            <circle cx="144" cy="106" r="12" fill="#fff" />
+            <path d="M84 92c8-20 25-32 44-32 21 0 38 15 44 32" fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" />
+            <defs>
+              <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#5b7cff" />
+                <stop offset="100%" stop-color="#15d5c8" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </header>
+
+      <main class="auth-card" aria-live="polite">
+        <div class="card-header">
+          <div class="icon-bubble">C</div>
+          <h2 id="form-title">Welcome back</h2>
+          <p id="form-subtitle">Log in to your account</p>
+        </div>
+
+        <button class="social-button" type="button" id="google-button">
+          <span class="social-icon">G</span>
+          Continue with Google
+        </button>
+
+        <div class="divider">or</div>
+
+        <form id="auth-form" class="auth-form">
+          <label class="field" id="email-field">
+            <span>Email</span>
+            <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+          </label>
+
+          <label class="field" id="password-field">
+            <span>Password</span>
+            <input id="password" name="password" type="password" placeholder="••••••••" autocomplete="current-password" required />
+          </label>
+
+          <div class="form-actions">
+            <button class="primary-button" type="submit" id="submit-button">Log in</button>
+          </div>
+        </form>
+
+        <div class="muted-links" id="secondary-links">
+          <a href="#forgot-password" data-view="forgot-password">Forgot password?</a>
+        </div>
+
+        <p class="switch-text" id="switch-text">
+          Don't have an account?
+          <a href="#register" data-view="register">Create one</a>
+        </p>
+
+        <div class="status-box" id="status-box" role="status" aria-live="polite"></div>
+      </main>
+
+      <footer class="page-footer">
+        <p>Carzzy Apps</p>
+      </footer>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-auth-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

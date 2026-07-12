@@ -1,0 +1,246 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --bg: #050816;
+  --panel: rgba(10, 18, 37, 0.94);
+  --panel-border: rgba(255, 255, 255, 0.1);
+  --text: #f8fbff;
+  --muted: #9ba7c2;
+  --accent: #5b7cff;
+  --accent-2: #15d5c8;
+  --shadow: 0 24px 80px rgba(2, 8, 23, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(91, 124, 255, 0.3), transparent 35%),
+    linear-gradient(135deg, var(--bg), #0c1736 70%, #07122d);
+  color: var(--text);
+}
+
+.page-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px 28px;
+  gap: 24px;
+}
+
+.hero {
+  width: min(920px, 100%);
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr;
+  align-items: center;
+  gap: 24px;
+}
+
+.hero-copy h1,
+.hero-copy .eyebrow {
+  margin: 0;
+}
+
+.eyebrow {
+  letter-spacing: 0.22em;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #7b90d4;
+}
+
+.hero-copy h1 {
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  margin-top: 6px;
+}
+
+.tagline {
+  margin-top: 12px;
+  font-size: 1.2rem;
+  color: #d7e0fb;
+}
+
+.hero-illustration {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-illustration svg {
+  width: min(320px, 100%);
+  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.35));
+}
+
+.auth-card {
+  width: min(460px, 100%);
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 28px;
+  padding: 30px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.icon-bubble {
+  width: 54px;
+  height: 54px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 16px;
+  font-size: 1.35rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  margin-bottom: 14px;
+}
+
+.card-header h2 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.card-header p {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.social-button,
+.primary-button {
+  width: 100%;
+  border: 0;
+  border-radius: 999px;
+  padding: 13px 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.social-button:hover,
+.primary-button:hover {
+  transform: translateY(-1px);
+}
+
+.social-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  color: #111827;
+  margin-bottom: 14px;
+}
+
+.social-icon {
+  width: 22px;
+  height: 22px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: white;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.divider {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 12px 0 16px;
+}
+
+.auth-form {
+  display: grid;
+  gap: 14px;
+}
+
+.field {
+  display: grid;
+  gap: 7px;
+  color: #dfe7ff;
+}
+
+.field span {
+  font-size: 0.96rem;
+  font-weight: 600;
+}
+
+.field input {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  padding: 13px 14px;
+  font-size: 1rem;
+}
+
+.field input::placeholder {
+  color: #8a97ba;
+}
+
+.form-actions {
+  margin-top: 8px;
+}
+
+.primary-button {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: white;
+  box-shadow: 0 12px 24px rgba(21, 213, 200, 0.2);
+}
+
+.muted-links {
+  margin-top: 14px;
+  text-align: right;
+}
+
+.muted-links a,
+.switch-text a {
+  color: #8ecaff;
+  text-decoration: none;
+}
+
+.switch-text {
+  margin-top: 16px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.status-box {
+  min-height: 24px;
+  margin-top: 16px;
+  color: #b4ffd9;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.page-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.page-footer p {
+  margin: 0;
+  color: #9ba7c2;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 760px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-copy h1 {
+    font-size: 2.2rem;
+  }
+}
